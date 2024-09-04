@@ -12,10 +12,13 @@ nbformat = "^5.10.4"
 plotly-express = "^0.4.1"
 scikit-learn = "^1.5.1"
 imbalanced-learn = "^0.12.3"
-numpy = "^2.1.0"
+numpy = ">=1.26.0,<2.0.0"
 openpyxl = "^3.1.5"
 streamlit = "^1.38.0"
 streamlit-dynamic-filters = "^0.1.9"
+langchain-google-genai = "^1.0.10"
+langchain-experimental = "^0.0.65"
+tabulate = "^0.9.0"
 
 
 [tool.poetry.group.dev.dependencies]
