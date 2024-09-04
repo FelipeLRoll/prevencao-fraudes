@@ -1,7 +1,6 @@
 
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 
