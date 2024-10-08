@@ -76,7 +76,7 @@ This is a **classification problem**, and the steps taken in the project include
     ![resultado.png](screenshots/resultado.png "resultado.png")
 
  * ## Prediction
-   The last step was to generate our model using **joblib** and then using the class *gerar_previsoes.py* to load a new dataset and make the predictions.  
+   The last step was to generate our model using **joblib** and then using the class *gerar_previsoes.py* to load a new dataset and make the predictions. You can see the predicted results in **previsao/previsoes.xlsx** 
     
 
 # Dashboard [Fraud Detection](https://app.powerbi.com/reportEmbed?reportId=ba0459e9-5520-4b20-a76c-be442c03b13a&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb)
@@ -96,7 +96,7 @@ This is a **classification problem**, and the steps taken in the project include
 * Run it with ```streamlit run app.py```
 
 * ### To see the predictions in a new dataset, run the file ```gerar_modelo.py``` and ```gerar_previsoes.py```, you can also create your own dataset with the same columns and test it  
-&nbsp;
+
 # Developed by: 
   * [Felipe Roll - Linkedin](https://www.linkedin.com/in/felipe-roll)
   * [Felipe Roll - Github](https://github.com/FelipeLRoll)
