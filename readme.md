@@ -37,6 +37,22 @@ This is a **classification problem**, and the steps taken in the project include
      
   * ## Visualization with *Plotly Express*
     Here many charts were made to better visualize our data and help us understand it better
+
+    ### **Clients by State**
+    
+    ![clientes-estado.png](screenshots/clientes-estado.png "clientes-estado.png")
+    - São Paulo has the most number of clients on this dataset
+
+    ### **Outstanding Balance by Sex**
+
+    ![saldodevedor-sexo.png](screenshots/saldodevedor-sexo.png "saldodevedor-sexo.png")
+    - Most of the people whose outstanding balance are between 20-50k, are men
+
+    ### **Payments on time x Late**
+
+    ![pagasatraso-emdia.png](screenshots/pagasatraso-emdia.png "pagasatraso-emdia.png")
+    - Most of the payments are paid on time
+    
     
   * ## Second Data Treatment
     Here we delete the columns that wont be part of our model and look for missing values.
@@ -44,14 +60,33 @@ This is a **classification problem**, and the steps taken in the project include
   * ## Exploratory Data Analysis with Categorical Columns
     Here we take a closer look to Categorical Columns, creating histograms to visualize patterns and how they behave. We also observe that there is a tendency on our data when the column "Total_Pago" is greater than 60K, there is a high chance that it is not a fraud.
     
+    ### **Possible Fraud by Marital Status**
+    
+    ![possivelfraude-estadocivil.png](screenshots/possivelfraude-estadocivil.png "possivelfraude-estadocivil.png")
+    - The higher number of possible frauds, are in the Single category
+
+    ### **Possible Fraud by Salary**
+    
+    ![possivelfraude-faixasalarial.png](screenshots/possivelfraude-faixasalarial.png "possivelfraude-faixasalarial.png")
+    - The higher number of possible frauds, are in the 1-3k Salary range
+
+    ### **Possible Fraud by Sex**
+    
+    ![possivelfraude-sexo.png](screenshots/possivelfraude-sexo.png "possivelfraude-sexo.png")
+    - The higher number of possible frauds, are by men, but, Women have 56% of total Possible Fraud(filtered by Women) being Yes, while Men(filtered by Men) have 55%
+    
   * ## Exploratory Data Analysis with Numerical Columns
     The Objective here is to observe correlation between Numerical Columns, we find that "VL_Emprestimo" and "VL_Emprestimo_ComJuros" have a high positive correlation, and, "QT_Parcelas_Atraso" and "QT_Total_Parcelas_Pagas" have a high negative correlation, this will be fixed in the normalization of out data. We also took a look at outliers, median, max and min values using boxplots.
+
+    ![correlacao.png](screenshots/correlacao.png "correlacao.png")
     
   * ## OneHotEncoding
     Here we split our data to use *Ordinal Encoding* for columns without a specific order, and *OneHotEncoding* for columns that have. This is crucial in order to train our model, this step transforms our data in numerical values to be used later.
     
   * ## Balacing the Target Column
     This step splits the data in the Target Column and the rest of the dataset, creating two datasets in order to balance out the Target Column using *SMOTE*, this help the machine learning model to not be biased towards one of the possible results.
+
+    ![possivelfraude.png](screenshots/possivelfraude.png "possivelfraude.png")
     
   * ## Scaling the data with *RobustScaler*
     Here we test Padroniztion, Standardization and the *RobustScaler* in order to put our numerical values in the same scale and not create a bias for our model. After testing with all three methods, we chose to use *RobustScaler* because we decided to leave some outliers in our data. We also split the data in *train* and *test*
@@ -59,24 +94,27 @@ This is a **classification problem**, and the steps taken in the project include
   * ## Model Creation, Hyperparameter Tunning, Training and Evaluation
     This step creates out Machine Learning Models that are going to be trained with our data, hyperparameters are also manualy assigned here. The three models used are *Random Forest Classifier*, *Support Vector Machine* and *K Neighbors Classifier*. We tested the **Accuracy**, **Best Hyperparameters**, **Training Time(in seconds)** and **Number of Total Trainings Made** for each of our models, having *K Neighbors Classifier* as the best model with an accuracy of 99.33%
 
-    ## **Random Forest**
+    ### **Random Forest**
 
     ![randomforest.png](screenshots/randomforest.png "randomforest.png")
 
-    ## **SVM**
+    ### **SVM**
 
     ![svm.png](screenshots/svm.png "svm.png")
 
-    ## **KNN**
+    ### **KNN**
 
     ![knn.png](screenshots/knn.png "knn.png")
 
-    ## **Results**
+    ### **Results**
 
     ![resultado.png](screenshots/resultado.png "resultado.png")
 
  * ## Prediction
-   The last step was to generate our model using **joblib** and then using the class *gerar_previsoes.py* to load a new dataset and make the predictions. You can see the predicted results in **previsao/previsoes.xlsx** 
+   The last step was to generate our model using **joblib** and then using the class *gerar_previsoes.py* to load a new dataset and make the predictions. You can see the predicted results in **previsao/previsoes.xlsx**
+   
+   ![importanciadascolunas.png](screenshots/importanciadascolunas.png "importanciadascolunas.png")
+   - Column Importance to the Model
     
 
 # Dashboard [Fraud Detection](https://app.powerbi.com/reportEmbed?reportId=ba0459e9-5520-4b20-a76c-be442c03b13a&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb)
