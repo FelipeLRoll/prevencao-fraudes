@@ -2,7 +2,7 @@
 
 # Fraud Detection Project
 
-### :brazil: [Versão em Português](https://github.com/FelipeLRoll/prevencao-fraudes/edit/main/readmePortugues.md)
+### :brazil: [Versão em Português](https://github.com/FelipeLRoll/prevencao-fraudes/blob/main/readmePortugues.md)
 ### Inspired by: [Fraud Detection](https://www.youtube.com/watch?v=r9aBF7dWX00)
 
 # Project Overview
